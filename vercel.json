@@ -14,13 +14,13 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "PORT": "@port",
-    "PASSWORD": "@password"
+    "PASSWORD": "@PASSWORD",
+    "PORT": "@PORT"
   },
   "build": {
     "env": {
-      "PASSWORD": "@password",
-      "PORT": "@port"
+      "PASSWORD": "@PASSWORD",
+      "PORT": "@PORT"
     }
   }
 }
