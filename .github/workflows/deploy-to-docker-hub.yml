@@ -1,5 +1,8 @@
 name: Deploy to Docker Hub
 
+env:
+  NAME: 'Kiattipong Kamonrat'
+
 on:
   push:
     branches:
@@ -11,6 +14,9 @@ jobs:
     environment: prod
 
     steps:
+      - name: Print name
+        run: echo "Hello, $NAME"
+
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -26,6 +32,6 @@ jobs:
       - name: Build and push Docker images
         run: |
           export PASSWORD=${{ secrets.PASSWORD }}
-          export PORT=${{ env.PORT }}
+          export PORT=${{ vars.PORT }}
           docker-compose build --build-arg PASSWORD=$PASSWORD --build-arg PORT=$PORT
           docker-compose push
