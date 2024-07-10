@@ -280,3 +280,4 @@ $RECYCLE.BIN/
 .yarnrc.yml
 # and uncomment the following lines
 # .pnp.*
+.vercel
