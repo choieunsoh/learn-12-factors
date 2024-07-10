@@ -13,14 +13,6 @@
     }
   ],
   "env": {
-    "NODE_ENV": "production",
-    "PASSWORD": "@PASSWORD",
-    "PORT": "@PORT"
-  },
-  "build": {
-    "env": {
-      "PASSWORD": "@PASSWORD",
-      "PORT": "@PORT"
-    }
+    "NODE_ENV": "production"
   }
 }
