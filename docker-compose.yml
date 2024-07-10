@@ -3,10 +3,16 @@ version: "3"
 services:
 
   app:
-    image: choieunsoh/my-ts-template
+    image: choieunsoh/learn-12-factors
     build:
       context: .
+      args:
+        - PORT
+        - PASSWORD
       dockerfile: Dockerfile
       target: deploy
     ports:
-      - "5000:4000"
+      - "${PORT}:${PORT}"
+    environment:
+      - PASSWORD=${PASSWORD}
+      - PORT=${PORT}
